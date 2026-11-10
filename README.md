@@ -54,7 +54,6 @@ EDU LMS dikembangkan sebagai solusi digital untuk membantu guru mengelola proses
 | 7 | Kuis dan CBT | Pelaksanaan evaluasi berbasis komputer |
 | 8 | Penilaian | Pengelolaan nilai dan hasil evaluasi |
 | 9 | Monitoring | Pemantauan aktivitas dan progres belajar |
-| 10 | AI Assistant | Bantuan AI untuk penyusunan materi dan soal |
 
 # 5. TAHAPAN PENGEMBANGAN KARYA DIGITAL
 
@@ -134,22 +133,6 @@ Tahap pencatatan seluruh aktivitas pengembangan karya digital.
 - Dokumentasi solusi.
 - Evaluasi perkembangan aplikasi.
 
-### Format Logbook
-
-| Tanggal | Aktivitas | Hasil | Kendala | Tindak Lanjut |
-|---|---|---|---|---|
-| | Analisis kebutuhan | | | |
-| | Perancangan database | | | |
-| | Pengembangan dashboard | | | |
-| | Pengembangan modul | | | |
-| | Pengujian sistem | | | |
-
-### Output
-- Logbook pengembangan.
-- Dokumentasi progres.
-- Catatan kendala dan solusi.
-- Bukti aktivitas pengembangan.
-
 ## LK4 – Implementasi dan Pengujian Karya Digital Guru
 
 Tahap pembangunan aplikasi LMS dan pengujian fungsi sistem.
@@ -175,7 +158,6 @@ Tahap pembangunan aplikasi LMS dan pengujian fungsi sistem.
 6. Kuis dan CBT.
 7. Penilaian.
 8. Monitoring pembelajaran.
-9. AI Learning Assistant.
 
 ### Output
 - Aplikasi LMS versi awal.
@@ -252,7 +234,6 @@ EDU LMS dikembangkan menggunakan arsitektur aplikasi berbasis web.
                  |
            MySQL Database
                  |
-          AI Integration
 ```
 
 
@@ -267,9 +248,8 @@ EDU LMS dikembangkan menggunakan pendekatan web application dengan Python Django
 | Python 3.x | Bahasa pemrograman utama |
 | Django 5.x | Backend web framework |
 | MySQL | Relational Database Management System |
-| HTML5 | Struktur halaman web |
-| CSS3 | Styling antarmuka |
-| Bootstrap 5 | Responsive UI Framework |
+| HTML | Struktur halaman web |
+| CSS | Styling antarmuka |
 | JavaScript | Interaktivitas antarmuka |
 | Django ORM | Pengelolaan database |
 | Git | Version control |
@@ -313,11 +293,11 @@ Aplikasi menggunakan arsitektur Model-View-Template (MVT) yang merupakan pola pe
 
 Perangkat yang diperlukan:
 
-- Python 3.x
-- Django 5.x
+- Python 3.2
+- Django 5.2
 - MySQL Server
 - MySQL Client
-- Visual Studio Code
+- Visual Studio Code/Antigravity
 - Git
 - Browser
 
@@ -338,20 +318,20 @@ pip install django
 
 # Instalasi MySQL driver
 pip install mysqlclient
+
+# Jika ada kendala di ENV Windows dapat  Jalankan perintah berikut di PowerShell:
+
+Set-ExecutionPolicy -Scope Process -ExecutionPolicy Bypass
 ```
 
 ### Membuat Project Django
 
 ```bash
-django-admin startproject config .
+django-admin startproject core .
 
 # Membuat aplikasi
-python manage.py startapp users
-python manage.py startapp courses
-python manage.py startapp materials
-python manage.py startapp assignments
-python manage.py startapp assessments
-python manage.py startapp monitoring
+python manage.py startapp app
+
 ```
 
 ### Menjalankan Development Server
@@ -371,58 +351,24 @@ http://127.0.0.1:8000/
 Struktur project yang direncanakan:
 
 ```text
-lms-karya-digital-guru/
+LMS_Karya_Digital/
 │
 ├── manage.py
 ├── requirements.txt
 ├── README.md
 ├── .gitignore
 │
-├── config/
+├── core/
 │   ├── __init__.py
 │   ├── settings.py
 │   ├── urls.py
 │   ├── asgi.py
 │   └── wsgi.py
 │
-├── users/
+├── app/
 │   ├── models.py
 │   ├── views.py
 │   ├── forms.py
-│   ├── urls.py
-│   └── admin.py
-│
-├── courses/
-│   ├── models.py
-│   ├── views.py
-│   ├── forms.py
-│   ├── urls.py
-│   └── admin.py
-│
-├── materials/
-│   ├── models.py
-│   ├── views.py
-│   ├── forms.py
-│   ├── urls.py
-│   └── admin.py
-│
-├── assignments/
-│   ├── models.py
-│   ├── views.py
-│   ├── forms.py
-│   ├── urls.py
-│   └── admin.py
-│
-├── assessments/
-│   ├── models.py
-│   ├── views.py
-│   ├── forms.py
-│   ├── urls.py
-│   └── admin.py
-│
-├── monitoring/
-│   ├── models.py
-│   ├── views.py
 │   ├── urls.py
 │   └── admin.py
 │
@@ -499,8 +445,6 @@ Generative AI dimanfaatkan sebagai pendukung proses pengembangan aplikasi, antar
 5. Membantu menyusun dokumentasi kode.
 6. Membantu merancang materi dan soal pembelajaran.
 
-Pemanfaatan AI tetap melalui proses verifikasi, pengujian, dan validasi oleh pengembang.
-
 ## 6.8 Pengujian Aplikasi
 
 Pengujian dilakukan secara bertahap menggunakan:
@@ -574,7 +518,7 @@ git add .
 git commit -m "Initial LMS development"
 
 # Menghubungkan repository
-git remote add origin https://github.com/USERNAME/lms-karya-digital-guru.git
+git remote add origin https://github.com/hermantoXYZ/
 
 # Push ke GitHub
 git branch -M main
@@ -662,7 +606,6 @@ EDU LMS diharapkan menjadi solusi pembelajaran digital yang membantu guru mengin
 Pengembangan karya digital ini dilakukan secara bertahap dengan memanfaatkan teknologi web dan Generative AI untuk menghasilkan aplikasi pembelajaran yang fungsional, mudah digunakan, dan dapat dikembangkan secara berkelanjutan.
 
 ---
-
 **EDU LMS – Learning Management System**
 
 *Karya Digital Guru | 2026*
